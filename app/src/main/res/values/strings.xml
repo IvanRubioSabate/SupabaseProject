@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Supabase</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_signUp_text"><u>You don\'t have an account? Sign Up</u></string>
+    <string name="register_signIn_text"><u>You already have an account? Sign In</u></string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="nom">Nom</string>
+    <string name="preu">Preu</string>
+</resources>
