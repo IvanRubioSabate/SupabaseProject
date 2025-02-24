@@ -43,6 +43,7 @@ class LoginFragment : Fragment() {
 
         if (signViewModel.logIn(email, password)) {
             Toast.makeText(context, "User Logged In", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_loginFragment_to_llistarProductesFragment)
         } else {
             Toast.makeText(context, "User Could Not Be Logged In", Toast.LENGTH_SHORT).show()
         }

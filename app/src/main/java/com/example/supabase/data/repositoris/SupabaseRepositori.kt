@@ -40,9 +40,33 @@ class SupabaseRepositori {
         }
 
         suspend fun getProducts(): List<Product> {
-            val products = supabase.from("product").select().decodeList<Product>()
-            Log.i("PRODUCTS", products.toString())
+            val products = supabase.from("Product").select().decodeList<Product>()
             return products
+        }
+
+        suspend fun insertProduct(product: Product) {
+            supabase.from("Product").insert(product)
+        }
+
+        suspend fun updateProduct(id: Int, name: String, price: Float) {
+            supabase.from("Product").update(
+                {
+                    set("name", name)
+                    set("price", price)
+                }
+            ) {
+                filter {
+                    eq("id", id)
+                }
+            }
+        }
+
+        suspend fun deleteProduct(id: Int) {
+            supabase.from("Product").delete {
+                filter {
+                    eq("id", id)
+                }
+            }
         }
     }
 }
